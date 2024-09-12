@@ -1,20 +1,17 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useRef } from "react";
+import LoanForm from "../components/LoanForm";
+import LoanCardModal from "../components/LoanCardModel";
+import { useReactToPrint } from "react-to-print";
+import { saveLoanData } from "../utils/storage";
 
 const AdminDashboard = () => {
-  const navigate = useNavigate();
   const [loanData, setLoanData] = useState({
     name: "",
     loanAmount: "",
     dueDate: "",
   });
-
-  useEffect(() => {
-    const isAuthenticated = localStorage.getItem("isAuthenticated");
-    if (!isAuthenticated) {
-      navigate("/login");
-    }
-  }, [navigate]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const componentRef = useRef();
 
   const handleChange = (e) => {
     setLoanData({
@@ -24,38 +21,34 @@ const AdminDashboard = () => {
   };
 
   const handleSave = () => {
-    localStorage.setItem("loanInfo", JSON.stringify(loanData));
+    saveLoanData(loanData);
     alert("Data berhasil disimpan");
+    setIsModalOpen(true); // Buka modal setelah menyimpan data
   };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
 
   return (
     <div>
       <h2>Admin Dashboard</h2>
-      <form>
-        <input
-          type="text"
-          name="name"
-          placeholder="Nama Nasabah"
-          value={loanData.name}
-          onChange={handleChange}
-        />
-        <input
-          type="number"
-          name="loanAmount"
-          placeholder="Jumlah Pinjaman"
-          value={loanData.loanAmount}
-          onChange={handleChange}
-        />
-        <input
-          type="date"
-          name="dueDate"
-          value={loanData.dueDate}
-          onChange={handleChange}
-        />
-        <button type="button" onClick={handleSave}>
-          Simpan
-        </button>
-      </form>
+      <LoanForm
+        loanData={loanData}
+        handleChange={handleChange}
+        handleSave={handleSave}
+      />
+      <LoanCardModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        loanData={loanData}
+        handlePrint={handlePrint}
+        ref={componentRef}
+      />
     </div>
   );
 };

@@ -1,24 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./pages/Login";
-import ProtectedRoute from "./components/ProtectedRoute";
-import "./App.css";
-import LoanCard from "./pages/LoanCard";
-import AdminDashboard from "./pages/AdminDashboard";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AdminDashboard from './pages/AdminDashboard';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Login Page */}
-        <Route path="/login" element={<Login />} />
-
-        {/* Setelah berhasil login halaman ini bisa diakses */}
-        <Route path="/" element={<ProtectedRoute><LoanCard /></ProtectedRoute>} />
-
-        <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+        <Route path="/" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
