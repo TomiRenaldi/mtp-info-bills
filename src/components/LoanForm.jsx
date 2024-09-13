@@ -2,7 +2,7 @@ import React from 'react';
 
 const LoanForm = ({ loanData, handleChange, handleSave }) => {
   return (
-    <form>
+    <form className='space-y-4'>
       <p>Nama Nasabah:</p>
       <input
         type="text"
