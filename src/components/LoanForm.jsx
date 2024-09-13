@@ -3,6 +3,7 @@ import React from 'react';
 const LoanForm = ({ loanData, handleChange, handleSave }) => {
   return (
     <form>
+      <p>Nama Nasabah:</p>
       <input
         type="text"
         name="name"
@@ -10,6 +11,7 @@ const LoanForm = ({ loanData, handleChange, handleSave }) => {
         value={loanData.name}
         onChange={handleChange}
       />
+      <p>Jumlah Pinjaman:</p>
       <input
         type="number"
         name="loanAmount"
@@ -17,6 +19,7 @@ const LoanForm = ({ loanData, handleChange, handleSave }) => {
         value={loanData.loanAmount}
         onChange={handleChange}
       />
+      <p>Open Date:</p>
       <input
         type="date"
         name="dueDate"
