@@ -7,8 +7,11 @@ import { saveLoanData } from "../utils/storage";
 const AdminDashboard = () => {
   const [loanData, setLoanData] = useState({
     numberDeal: "",
+    noIndentity: "",
     name: "",
     loanAmount: "",
+    lastPayment: "",
+    openDate: "",
     dueDate: "",
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -42,7 +45,7 @@ const AdminDashboard = () => {
         <h1 className="mt-10 text-center text-2xl font-semibold leading-9 tracking-tight text-gray-900">
           Admin Dashboard
         </h1>
-        <h2 className="text-center text-1xl leading-9 tracking-tight text-gray-600">
+        <h2 className="text-center text-1xl leading-9 tracking-tight text-gray-400">
           Rekayasa Kartu Informasi Tagihan
         </h2>
         <LoanForm
