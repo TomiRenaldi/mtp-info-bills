@@ -10,9 +10,9 @@ const AdminDashboard = () => {
     noIndentity: "",
     name: "",
     loanAmount: "",
-    lastPayment: "",
     openDate: "",
     dueDate: "",
+    lastPayment: "",
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const componentRef = useRef();
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
           Admin Dashboard
         </h1>
         <h2 className="text-center text-1xl leading-9 tracking-tight text-gray-400">
-          Rekayasa Kartu Informasi Tagihan
+          Rekayasa Data Informasi Tagihan
         </h2>
         <LoanForm
           loanData={loanData}
