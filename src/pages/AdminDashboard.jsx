@@ -13,6 +13,7 @@ const AdminDashboard = () => {
     openDate: "",
     dueDate: "",
     lastPayment: "",
+    noVA: "",
   });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const componentRef = useRef();
