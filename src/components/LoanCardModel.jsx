@@ -28,7 +28,7 @@ const LoanCardModel = forwardRef(
             <h3 className="text-base font-semibold leading-6 text-gray-900 mt-3">
               Aplikasi Informasi Tagihan
             </h3>
-            <p className="max-w-2xl text-sm leading-6 text-gray-500 mb-5">
+            <p className="max-w-2xl text-sm leading-6 text-gray-500 mb-3">
               Data Tagihan Cashloan klien dan Informasi Pembayaran
             </p>
           </div>
@@ -36,59 +36,59 @@ const LoanCardModel = forwardRef(
           {/* Percetakan */}
           <div className="border-t border-gray-100">
             <dl className="divide-y divide-gray-100">
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+              <div className="px-1 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900">
                   Nomor
                 </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
+                <dd className="text-md leading-6 text-gray-500 sm:col-span-1 sm:mt-0 ml-10">
                   {loanData.numberDeal}
                 </dd>
               </div>
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+              <div className="px-1 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900">
                   No. Identitas (NIK)
                 </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
+                <dd className="text-md leading-6 text-gray-500 sm:col-span-1 sm:mt-0 ml-10">
                   {loanData.noIndentity}
                 </dd>
               </div>
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+              <div className="px-1 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900">
                   Nama Klien
                 </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
+                <dd className="text-md leading-6 text-gray-500 sm:col-span-1 sm:mt-0 ml-10">
                   {loanData.name}
                 </dd>
               </div>
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+              <div className="px-1 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900 ">
                   Total Tagihan
                 </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
+                <dd className="text-md leading-6 text-gray-500 sm:col-span-1 sm:mt-0 ml-10">
                   {formatRupiah(loanData.loanAmount)}
                 </dd>
               </div>
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+              <div className="px-1 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900">
                   Tanggal Pinjam
                 </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
+                <dd className="text-md leading-6 text-gray-500 sm:col-span-1 sm:mt-0 ml-10">
                   {loanData.openDate}
                 </dd>
               </div>
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+              <div className="px-1 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900">
                   Tanggal Bayar Terakhir
                 </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
+                <dd className="text-md leading-6 text-gray-500 sm:col-span-1 sm:mt-0 ml-10">
                   {loanData.dueDate}
                 </dd>
               </div>
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
+              <div className="px-1 py-1 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900">
                   No.Virtual Account
                 </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
+                <dd className="text-md leading-6 text-gray-500 sm:col-span-1 sm:mt-0 ml-10">
                   {loanData.noVA}
                 </dd>
               </div>
@@ -96,12 +96,16 @@ const LoanCardModel = forwardRef(
           </div>
           <p>
             Bayar melalui transfer Antar Bank BNI. Informasi lebih lanjut
-            hubungi layanan pelanggan kami.
+            hubungi layanan pelanggan kami
           </p>
-          
+
           <div className="w-full text-sm text-center text-slate-400">
-            <h1 className="mt-1 sm:mt-7">Automatic Original Print on Database</h1>
-            <p className="proportional-nums">Printed on: {getCurrentDateTime()}</p>
+            <h1 className="mt-1 sm:mt-7">
+              Automatic Original Print on Database
+            </h1>
+            <p className="proportional-nums">
+              Printed on: {getCurrentDateTime()}
+            </p>
           </div>
         </div>
 
