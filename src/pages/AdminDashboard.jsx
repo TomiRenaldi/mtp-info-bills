@@ -12,7 +12,6 @@ const AdminDashboard = () => {
     loanAmount: "",
     openDate: "",
     dueDate: "",
-    lastPayment: "",
     noVA: "",
   });
   const [isModalOpen, setIsModalOpen] = useState(false);

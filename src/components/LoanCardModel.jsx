@@ -86,14 +86,6 @@ const LoanCardModel = forwardRef(
               </div>
               <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
                 <dt className="text-sm font-medium leading-6 text-gray-900">
-                  Pembayaran Terakhir
-                </dt>
-                <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
-                  {formatRupiah(loanData.lastPayment)}
-                </dd>
-              </div>
-              <div className="px-2 py-2 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-0">
-                <dt className="text-sm font-medium leading-6 text-gray-900">
                   No.Virtual Account
                 </dt>
                 <dd className="text-md leading-6 text-gray-500 sm:col-span-2 sm:mt-0 ml-10">
@@ -110,7 +102,6 @@ const LoanCardModel = forwardRef(
           <div className="w-full text-sm text-center text-slate-400">
             <h1 className="mt-1 sm:mt-7">Automatic Original Print on Database</h1>
             <p className="proportional-nums">Printed on: {getCurrentDateTime()}</p>
-            <p>Handle: Fausan Didalam Koeswara</p>
           </div>
         </div>
 
