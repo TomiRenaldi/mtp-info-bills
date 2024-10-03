@@ -1,4 +1,4 @@
-# PT Muara Toba Persada - Info Bills Tools
+# mtp-info-bills-tools
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
